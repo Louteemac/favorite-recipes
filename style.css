@@ -1,0 +1,163 @@
+/*Palette
+text color: black or white
+light: #a9ca75
+medium: #799948
+dark: #4b6b1c
+*/
+
+html{
+background: #799948;
+font-family: sans-serif;
+}
+
+body {
+margin: 0;
+padding: 0;
+}
+
+header {
+background: #a9ca75;
+}
+
+em {
+font-weight: bold;
+font-style: normal;
+}
+
+/* Moving the text away from the left*/
+h1, h2, h3, p {
+margin: 0 0 0 .5rem;
+padding: .75rem 0 0 .5rem;
+}
+
+h2, div.all-recipes h3 {
+text-align: left;
+text-transform: uppercase;
+}
+
+section {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+/* Recipe Cards */
+article {
+flex-basis: 95%;
+border: #4b6b1c 2px dotted;
+padding: 0 1rem 1rem 0;
+margin: .75rem;
+}
+
+/* every other recipe card */
+article:nth-child(even) {
+background-color: #a9ca75;
+}
+
+/* Recipe Notes */
+main ul.notes li {
+display: inline-block;
+list-style-type: none;
+border: #4b6b1c 1px solid;
+border-radius: 10px;
+padding: .25rem;
+margin-bottom: .5rem;
+}
+
+/* List Item Emphasis / Time Total */
+li.emphasis {
+font-weight: bold;
+}
+
+/* Main Links */
+a {
+text-decoration: underline dotted #4b6b1c;
+color: black;
+}
+
+/* Nav Links & Home Page Recipe Links*/
+nav a:link, nav a:visited, div.all-recipes button a  {
+background-color: #4b6b1c;
+color: white;
+border: #4b6b1c 1px solid;
+border-radius: 1em;
+padding: 10px 20px;
+text-align: center;
+}
+
+/* Nav Links Hover & Active */
+nav a:hover, nav a:active, div.all-recipes button:hover, div.all-recipes button:active  {
+opacity: 70%;
+}
+
+/* Nav List */
+nav div {
+display: flex;
+flex-wrap: wrap;
+justify-content: left;
+padding-left: 1rem;
+padding-top: 1rem;
+}
+
+/* Nav List Items */
+button {
+background: none;
+border: none;
+margin-bottom: 30px;
+padding-top: 20px;
+padding-right: 10px;
+font-size: 4vw;
+}
+
+p, li, button, h1, h2, h3, h4 {
+font-size:4vw;
+}
+
+/* Recipe Directions */
+ol li {
+text-align: left;
+list-style-position:outside;
+}
+
+/* ipod if width >480px*/
+@media (max-width: 480px) {
+
+html {
+font-size: 2vw;
+}
+
+nav div {
+padding-bottom: 5vw;
+}
+
+button {
+margin: .1em;
+padding: 1em;
+}
+
+} /* the end of ipod sizing /*
+
+/* tablet if width <=767px*/
+@media (min-width: 767px) {
+
+} /* the end of tablet sizing /*
+
+/* computer if width <=1000px*/
+@media (min-width: 1000px) {
+
+article {
+display: flex;
+align-items: flex-start;
+}
+
+div {
+flex-basis: 100%;
+}
+
+article h2 {
+writing-mode: vertical-rl;
+padding-right: 1rem;
+padding-left: 0;
+}
+
+} /* the end of computer sizing /*
